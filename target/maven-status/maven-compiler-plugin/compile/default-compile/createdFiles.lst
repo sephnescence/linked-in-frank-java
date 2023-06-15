@@ -1,1 +1,4 @@
+io/github/sephnescence/learningspring/util/AppStartupEvent.class
+io/github/sephnescence/learningspring/data/RoomRepository.class
+io/github/sephnescence/learningspring/data/Room.class
 io/github/sephnescence/learningspring/LearningSpringApplication.class
