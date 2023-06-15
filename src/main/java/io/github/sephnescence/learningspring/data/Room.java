@@ -2,7 +2,7 @@ package io.github.sephnescence.learningspring.data;
 
 import javax.persistence.*; // Interesting. At some point my IDE decided to just import everything
 
-/**
+/*
  * We're defining this class based on the schema definition in schema.sql
  *
  * CREATE TABLE ROOM(
@@ -30,7 +30,7 @@ public class Room {
     @Column(name="BED_INFO")
     private String bedInfo;
 
-    /**
+    /*
      * The following code was done by hitting cmd+n and selecting "Getter and Setter" and selecting the four
      * attributes. Nice
      */
@@ -67,7 +67,7 @@ public class Room {
         this.bedInfo = bedInfo;
     }
 
-    /**
+    /*
      * Frank also wants us to generate a new toString method
      */
 
