@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: io.github.sephnescence.learningspring.LearningSpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.53 s - in io.github.sephnescence.learningspring.LearningSpringApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.563 s - in io.github.sephnescence.learningspring.LearningSpringApplicationTests
