@@ -7,23 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.frankmoley.lil.learningspring.data.Guest;
-import com.frankmoley.lil.learningspring.data.GuestRepository;
-import com.frankmoley.lil.learningspring.data.Reservation;
-import com.frankmoley.lil.learningspring.data.ReservationRepository;
-import com.frankmoley.lil.learningspring.data.Room;
-import com.frankmoley.lil.learningspring.data.RoomRepository;
+import io.github.sephnescence.learningspring.data.*;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ReservationService {
-    private RoomRepository roomRepository;
-    private GuestRepository guestRepository;
-    private ReservationRepository reservationRepository;
+    private final RoomRepository roomRepository;
+    private final GuestRepository guestRepository;
+    private final ReservationRepository reservationRepository;
 
     public List<RoomReservation> getRoomReservationsForDate(Date date) {
         Iterable<Room> rooms = this.roomRepository.findAll();
-        Map<Long, RoomReservation> roomReservationMap = new HashMap();
+        Map<Long, RoomReservation> roomReservationMap = new HashMap<>();
         rooms.forEach(room -> {
             RoomReservation roomReservation = new RoomReservation();
             roomReservation.setRoomId(room.getId());
@@ -35,7 +30,7 @@ public class ReservationService {
         reservations.forEach(reservation -> {
             RoomReservation roomReservation = roomReservationMap.get(reservation.getRoomId());
             roomReservation.setDate(date);
-            Guest guest = this.guestRepository.findById(reservation.getGuestId()).get();
+            Guest guest = this.guestRepository.findById(reservation.getGuestId()).get(); // My IDE complains about a lack of `isPresent` check
             roomReservation.setFirstName(guest.getFirstName());
             roomReservation.setLastName(guest.getLastName());
             roomReservation.setGuestId(guest.getGuestId());

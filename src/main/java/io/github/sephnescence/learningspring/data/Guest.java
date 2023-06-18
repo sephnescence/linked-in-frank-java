@@ -43,11 +43,11 @@ public class Guest {
     @Column(name="PHONE_NUMBER")
     private String phoneNumber;
 
-    public long getId() {
+    public long getGuestId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setGuestId(long id) {
         this.id = id;
     }
 
