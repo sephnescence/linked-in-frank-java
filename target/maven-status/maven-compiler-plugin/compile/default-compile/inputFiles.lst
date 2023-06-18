@@ -1,7 +1,10 @@
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/data/GuestRepository.java
+/Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/business/RoomReservation.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/data/Guest.java
+/Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/business/ReservationService.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/data/Room.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/LearningSpringApplication.java
+/Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/util/DateUtils.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/data/RoomRepository.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/data/ReservationRepository.java
 /Users/blaketaylor/Library/Code/linked-in-frank-java/src/main/java/io/github/sephnescence/learningspring/util/AppStartupEvent.java
