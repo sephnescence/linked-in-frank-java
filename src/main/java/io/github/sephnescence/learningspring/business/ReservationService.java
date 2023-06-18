@@ -13,7 +13,9 @@ import com.frankmoley.lil.learningspring.data.Reservation;
 import com.frankmoley.lil.learningspring.data.ReservationRepository;
 import com.frankmoley.lil.learningspring.data.Room;
 import com.frankmoley.lil.learningspring.data.RoomRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ReservationService {
     private RoomRepository roomRepository;
     private GuestRepository guestRepository;
