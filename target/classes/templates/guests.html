@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Landon Hotel: Room Reservations</title>
+</head>
+<body>
+<h1>Welcome to the Guests page</h1>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email Address</td>
+        <td>Address</td>
+        <td>Country</td>
+        <td>State</td>
+        <td>Phone Number</td>
+    </tr>
+    <tr th:each="guest: ${guests}">
+        <td th:text="${guest.getFirstName()}">First Name</td>
+        <td th:text="${guest.getLastName()}">Last Name</td>
+        <td th:text="${guest.getEmailAddress()}">Email Address</td>
+        <td th:text="${guest.getAddress()}">Address</td>
+        <td th:text="${guest.getCountry()}">Country</td>
+        <td th:text="${guest.getState()}">State</td>
+        <td th:text="${guest.getPhoneNumber()}">Phone Number</td>
+    </tr>
+</table>
+</body>
+</html>
