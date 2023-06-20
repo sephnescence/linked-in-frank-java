@@ -29,10 +29,16 @@ public class RoomReservationController {
         String dateString,
         Model model
     ) {
+        /*
+        I've noted that you can pass in 2022-02-30 for example, and dateString doesn't fail validation of any kind,
+            and date resolves to Mar 2
+
+        Additionally, if you provide something like "invalid", it returns the current date
+         */
         Date date = dateUtils.createDateFromDateString(dateString);
         List<RoomReservation> reservations = reservationService.getRoomReservationsForDate(date);
         model.addAttribute("roomReservations", reservations);
 
-        return dateString;
+        return "roomres";
     }
 }
