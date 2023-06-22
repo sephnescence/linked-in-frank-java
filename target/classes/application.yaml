@@ -1,6 +1,17 @@
 # In earlier versions of Spring, connecting to the database used to raise info logs, but they've now been moved
 #   to debug. We wouldn't turn this on in production, but it's just useful locally
-logging.level.org.springframework.jdbc.datasource.init.ScriptUtils=debug
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          datasource:
+            init:
+              ScriptUtils: debug
+
 # We've already defined the schema, so we need to tell hibernate that it's been taken care of already and that
 #   we only want it to connect to the database
-spring.jpa.hibernate.ddl-auto=none
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
