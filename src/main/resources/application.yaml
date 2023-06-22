@@ -9,9 +9,44 @@ logging:
             init:
               ScriptUtils: debug
 
+server:
+  port: 8080
+
 # We've already defined the schema, so we need to tell hibernate that it's been taken care of already and that
 #   we only want it to connect to the database
 spring:
+  # This was spring.profiles, but IntelliJ suggested I do spring.config.activate.on-profile instead
+  config:
+    activate:
+      # This is the default profile because it's first, but
+      #   you can opt to force the usage of this profile by setting "spring.profiles.active=dev" in
+      #   the "Run | Edit Configurations" menu
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+---
+# The above "---" is how you separate profiles
+
+# This doesn't work like a docker-compose.override.yml. You apparently must define everything again
+#   for example, if I didn't specify spring.jps.hibernate.ddl-auto=none, it would not use data.sql to seed
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          datasource:
+            init:
+              ScriptUtils: debug
+server:
+  port: 9000
+spring:
+  config:
+    activate:
+      # You can opt to use this profile instead by
+      #   setting "spring.profiles.active=test" in the "Run | Edit Configurations" menu
+      on-profile: test
   jpa:
     hibernate:
       ddl-auto: none

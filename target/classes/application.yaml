@@ -9,9 +9,35 @@ logging:
             init:
               ScriptUtils: debug
 
+server:
+  port: 8080
+
 # We've already defined the schema, so we need to tell hibernate that it's been taken care of already and that
 #   we only want it to connect to the database
 spring:
+  # This was spring.profiles, but IntelliJ suggested I do spring.config.activate.on-profile instead
+  config:
+    activate:
+      on-profile: dev # This is the default profile because it's first, but you can opt to force the usage of this profile by setting "spring.profiles.active=dev" in the "Run | Edit Configurations" menu
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+---
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          datasource:
+            init:
+              ScriptUtils: debug
+server:
+  port: 9000
+spring:
+  config:
+    activate:
+      on-profile: test # You can opt to use this profile instead by setting "spring.profiles.active=test" in the "Run | Edit Configurations" menu
   jpa:
     hibernate:
       ddl-auto: none
